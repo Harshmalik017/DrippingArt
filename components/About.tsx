@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SectionHeading from "./ui/SectionHeading";
 import ClayCard from "./ui/ClayCard";
 import { siteConfig } from "@/lib/site-config";
@@ -31,7 +32,17 @@ export default function About() {
       <div className="mx-auto grid max-w-6xl gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
         <ClayCard strong className="relative overflow-hidden p-8 sm:p-10">
           <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-coral/20 blur-2xl" />
-          <p className="font-display text-2xl leading-snug text-ink dark:text-cream sm:text-3xl">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-[28px] border border-cream/70 bg-cream/40 shadow-[var(--clay-shadow-sm)] dark:border-white/5 dark:bg-night-surface/30">
+            <Image
+              src="/images/rashmi-tomar.jpg"
+              alt="Rashmi Tomar, founder of Dripping Art"
+              fill
+              priority
+              sizes="(min-width: 1024px) 360px, (min-width: 640px) 40vw, 90vw"
+              className="object-cover"
+            />
+          </div>
+          <p className="mt-8 font-display text-2xl leading-snug text-ink dark:text-cream sm:text-3xl">
             &ldquo;Every pour is a little different &mdash; that&apos;s the part
             I love most about resin.&rdquo;
           </p>
@@ -50,13 +61,18 @@ export default function About() {
 
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
             {steps.map((item) => (
-              <div key={item.step} className="flex gap-4">
-                <span className="font-display text-2xl text-gold-dark dark:text-gold-light">{item.step}</span>
+              <ClayCard
+                key={item.step}
+                className="flex items-start gap-4 border border-cream/70 p-5 shadow-[var(--clay-shadow-sm)] dark:border-white/5 sm:p-6"
+              >
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-gold/25 bg-gold/10 font-display text-lg text-gold-dark shadow-[var(--clay-shadow-sm)] dark:border-gold/15 dark:bg-gold/10 dark:text-gold-light">
+                  {item.step}
+                </span>
                 <div>
                   <h3 className="font-display text-lg text-ink dark:text-cream">{item.title}</h3>
-                  <p className="mt-1 font-body text-sm text-ink/65 dark:text-night-soft">{item.text}</p>
+                  <p className="mt-1 font-body text-sm leading-relaxed text-ink/65 dark:text-night-soft">{item.text}</p>
                 </div>
-              </div>
+              </ClayCard>
             ))}
           </div>
         </div>
