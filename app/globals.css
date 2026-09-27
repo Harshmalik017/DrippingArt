@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Playfair Display", serif;
+  --font-body: "Jost", sans-serif;
+
+  --clay-shadow: 9px 9px 18px rgba(178, 120, 90, 0.28), -9px -9px 18px rgba(255, 255, 255, 0.85);
+  --clay-shadow-sm: 5px 5px 10px rgba(178, 120, 90, 0.26), -5px -5px 10px rgba(255, 255, 255, 0.8);
+  --clay-shadow-inset: inset 5px 5px 10px rgba(178, 120, 90, 0.3), inset -5px -5px 10px rgba(255, 255, 255, 0.7);
+  --clay-shadow-lg: 14px 14px 28px rgba(178, 120, 90, 0.3), -14px -14px 28px rgba(255, 255, 255, 0.9);
+
+  --scrollbar-track: #f3e7da;
+  --scrollbar-thumb: #d06b4c;
+  --scrollbar-thumb-hover: #b85a3b;
+}
+
+.dark {
+  --clay-shadow: 9px 9px 20px rgba(0, 0, 0, 0.55), -7px -7px 16px rgba(255, 255, 255, 0.04);
+  --clay-shadow-sm: 5px 5px 12px rgba(0, 0, 0, 0.5), -4px -4px 10px rgba(255, 255, 255, 0.035);
+  --clay-shadow-inset: inset 5px 5px 10px rgba(0, 0, 0, 0.55), inset -4px -4px 8px rgba(255, 255, 255, 0.03);
+  --clay-shadow-lg: 16px 16px 32px rgba(0, 0, 0, 0.6), -10px -10px 22px rgba(255, 255, 255, 0.04);
+
+  --scrollbar-track: #2a211b;
+  --scrollbar-thumb: #c69a56;
+  --scrollbar-thumb-hover: #dfc08c;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+html {
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  scrollbar-width: thin;
+}
+
+body {
+  @apply bg-cream text-ink dark:bg-night dark:text-cream;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 999px;
+  border: 3px solid var(--scrollbar-track);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover);
+}
+
+@layer utilities {
+  .clay {
+    @apply bg-cream dark:bg-night-surface rounded-clay;
+    box-shadow: var(--clay-shadow);
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+  }
+
+  .clay-sm {
+    @apply bg-cream dark:bg-night-surface rounded-2xl;
+    box-shadow: var(--clay-shadow-sm);
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+  }
+
+  .clay-strong {
+    @apply bg-cream-deep dark:bg-night-elevated rounded-clay;
+    box-shadow: var(--clay-shadow-lg);
+  }
+
+  .clay-pressed {
+    box-shadow: var(--clay-shadow-inset) !important;
+    transform: translateY(1px);
+  }
+
+  .clay-interactive {
+    @apply cursor-pointer active:translate-y-[1px];
+  }
+  .clay-interactive:active {
+    box-shadow: var(--clay-shadow-inset);
+  }
+
+  /* Same soft shadow as .clay-sm, but without forcing a background colour —
+     for buttons that should be filled with a theme accent (e.g. carousel
+     prev/next arrows, "Call Now") rather than the neutral clay surface. */
+  .clay-accent {
+    border-radius: 9999px;
+    box-shadow: var(--clay-shadow-sm);
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+  }
+  .clay-accent:active {
+    box-shadow: var(--clay-shadow-inset);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #b85a3b;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
