@@ -32,14 +32,14 @@ export default function About() {
       <div className="mx-auto grid max-w-6xl gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
         <ClayCard strong className="relative overflow-hidden p-8 sm:p-10">
           <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-coral/20 blur-2xl" />
-          <div className="relative aspect-[4/5] overflow-hidden rounded-[28px] border border-cream/70 bg-cream/40 shadow-[var(--clay-shadow-sm)] dark:border-white/5 dark:bg-night-surface/30">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-[28px] border border-cream/20 bg-transparent shadow-[var(--clay-shadow-lg)] ring-1 ring-black/5 dark:border-white/5 dark:ring-white/5">
             <Image
-              src="/images/rashmi-tomar.jpg"
+              src="/images/rashmi-tomar.png"
               alt="Rashmi Tomar, founder of Dripping Art"
               fill
               priority
               sizes="(min-width: 1024px) 360px, (min-width: 640px) 40vw, 90vw"
-              className="object-cover"
+              className="object-contain p-3"
             />
           </div>
           <p className="mt-8 font-display text-2xl leading-snug text-ink dark:text-cream sm:text-3xl">
