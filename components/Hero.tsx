@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Button from "./ui/Button";
 import { siteConfig } from "@/lib/site-config";
 
@@ -44,12 +45,15 @@ export default function Hero() {
           <div className="absolute inset-6 rounded-full border border-gold/40 dark:border-gold/25" />
 
           <div className="clay-strong absolute inset-10 overflow-hidden rounded-blob">
-            <div className="absolute inset-0 bg-gradient-to-br from-coral/40 via-blush/35 to-gold/35 dark:from-coral/25 dark:via-plum/20 dark:to-gold/20" />
-            <div className="absolute -bottom-6 left-1/3 h-20 w-6 rounded-full bg-terracotta/50 blur-[2px]" />
-            <div className="absolute -bottom-10 left-[55%] h-28 w-5 rounded-full bg-terracotta/40 blur-[2px]" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="font-display text-3xl text-ink/70 dark:text-cream/70">D | A</span>
-            </div>
+            <Image
+              src="/images/hero-section-image.jpg"
+              alt="Dripping Art resin artwork on display"
+              fill
+              priority
+              sizes="(min-width: 1024px) 360px, (min-width: 640px) 384px, 320px"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-coral/10 via-transparent to-gold/10 dark:from-coral/5 dark:to-gold/5" />
           </div>
 
           <span className="absolute bottom-2 left-[38%] h-3 w-3 animate-drip rounded-full bg-terracotta/70 [animation-delay:900ms]" />
