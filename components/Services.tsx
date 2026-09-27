@@ -59,11 +59,6 @@ export default function Services() {
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-night/30 via-transparent to-transparent dark:from-night/45" />
-                  <div className="absolute left-4 top-4">
-                    <span className={`inline-flex rounded-full px-3 py-1 font-body text-[11px] tracking-wide ${accent.chip} ${accent.icon}`}>
-                      Custom
-                    </span>
-                  </div>
                 </div>
 
                 <div className="flex flex-1 flex-col p-6">
