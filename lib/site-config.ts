@@ -127,6 +127,8 @@ export type Testimonial = {
   location: string;
   quote: string;
   piece: string;
+  image?: string;
+  imageAlt?: string;
   // Shown in the homepage carousel when true; the /reviews page always
   // shows every testimonial in this array regardless of this flag.
   featured?: boolean;
@@ -139,6 +141,8 @@ export const testimonials: Testimonial[] = [
     quote:
       "The wall clock matched our living room perfectly, and Rashmi kept adjusting the colours until we were happy. It arrived carefully packed and exactly on time.",
     piece: "Marble Wall Clock",
+    image: "/images/testimonials/testimonial-1.webp",
+    imageAlt: "Ananya Sharma portrait",
     featured: true,
   },
   {
@@ -147,6 +151,8 @@ export const testimonials: Testimonial[] = [
     quote:
       "We got our wedding mala preserved and it's now the centrepiece of our hallway. So much better than it sitting in a box somewhere.",
     piece: "Wedding Mala Preservation",
+    image: "/images/testimonials/testimonial-2.webp",
+    imageAlt: "Rohit Verma portrait",
     featured: true,
   },
   {
@@ -155,6 +161,8 @@ export const testimonials: Testimonial[] = [
     quote:
       "Ordered a set of nameplate and keychains as return gifts. Every single piece looked a little different, which made them feel special.",
     piece: "Nameplate + Keychain Set",
+    image: "/images/testimonials/testimonial-3.webp",
+    imageAlt: "Priya Malhotra portrait",
     featured: true,
   },
   {
@@ -163,6 +171,8 @@ export const testimonials: Testimonial[] = [
     quote:
       "Rashmi understood exactly what I wanted from a two-line description and a reference photo. Communication was easy throughout.",
     piece: "Custom Photo Frame",
+    image: "/images/testimonials/testimonial-4.webp",
+    imageAlt: "Karan Mehta portrait",
     featured: true,
   },
   {
@@ -171,6 +181,8 @@ export const testimonials: Testimonial[] = [
     quote:
       "Sent over our bouquet the week after the wedding and honestly forgot about it until it arrived — it looks better than the real flowers ever did.",
     piece: "Bridal Bouquet Preservation",
+    image: "/images/testimonials/testimonial-5.webp",
+    imageAlt: "Simran Kaur portrait",
     featured: true,
   },
   {
@@ -179,6 +191,8 @@ export const testimonials: Testimonial[] = [
     quote:
       "Ordered coasters for a housewarming and everyone asked where they were from. Fast replies on WhatsApp throughout the process too.",
     piece: "Ocean Geode Coaster Set",
+    image: "/images/testimonials/testimonial-7.webp",
+    imageAlt: "Vikram Nair portrait",
     featured: true,
   },
   {
@@ -187,6 +201,8 @@ export const testimonials: Testimonial[] = [
     quote:
       "The jewellery tray I ordered as a gift was even prettier in person. Well packed and delivered a day earlier than expected.",
     piece: "Jewellery Tray",
+    image: "/images/testimonials/testimonial-6.webp",
+    imageAlt: "Divya Kapoor portrait",
   },
   {
     name: "Arjun Bhatia",
