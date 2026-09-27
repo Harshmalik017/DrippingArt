@@ -47,9 +47,12 @@ export default function Services() {
             );
           })}
 
-          <div className="clay flex flex-col justify-center p-6 text-center">
-            <p className="font-display text-lg text-ink dark:text-cream">Have a different keepsake in mind?</p>
-            <p className="mt-2 font-body text-sm text-ink/60 dark:text-night-soft">
+          <div className="relative flex flex-col justify-center overflow-hidden rounded-clay bg-coral px-6 py-7 text-night shadow-[var(--clay-shadow-lg)] ring-1 ring-white/20 dark:bg-coral-dark dark:text-night">
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.24),transparent_55%)]" />
+            <p className="relative font-display text-lg text-night">
+              Have a different keepsake in mind?
+            </p>
+            <p className="relative mt-2 font-body text-sm text-night/80">
               If it can be set in resin, it&apos;s worth asking &mdash; message Rashmi
               directly to talk through it.
             </p>
