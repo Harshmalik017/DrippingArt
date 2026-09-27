@@ -30,7 +30,7 @@ export default function About() {
   return (
     <section id="about" className="px-4 py-20 sm:px-6">
       <div className="mx-auto grid max-w-6xl gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
-        <ClayCard strong className="relative overflow-hidden p-8 sm:p-10">
+        <ClayCard strong className="relative overflow-hidden p-6 sm:p-8">
           <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-coral/20 blur-2xl" />
           <div className="relative aspect-[4/5] overflow-hidden rounded-[28px] border border-cream/20 bg-transparent shadow-[var(--clay-shadow-lg)] ring-1 ring-black/5 dark:border-white/5 dark:ring-white/5">
             <Image
@@ -39,14 +39,14 @@ export default function About() {
               fill
               priority
               sizes="(min-width: 1024px) 360px, (min-width: 640px) 40vw, 90vw"
-              className="object-contain p-3"
+              className="object-contain p-1.5"
             />
           </div>
-          <p className="mt-8 font-display text-2xl leading-snug text-ink dark:text-cream sm:text-3xl">
+          <p className="mt-6 font-display text-2xl leading-snug text-ink dark:text-cream sm:text-3xl">
             &ldquo;Every pour is a little different &mdash; that&apos;s the part
             I love most about resin.&rdquo;
           </p>
-          <p className="mt-6 font-body text-sm uppercase tracking-[0.2em] text-terracotta dark:text-coral">
+          <p className="mt-5 font-body text-sm uppercase tracking-[0.2em] text-terracotta dark:text-coral">
             Rashmi Tomar
           </p>
           <p className="font-body text-sm text-ink/60 dark:text-night-soft">Founder, Dripping Art</p>
